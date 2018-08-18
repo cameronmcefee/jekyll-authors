@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+{%- assign author = site.authors | where: "name": page.author | first -%}
+<p>By <a href="/authors/{{ author.slug }}/">{{ author.name }}</a></p>
+
+{{ page.content }}
